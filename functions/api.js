@@ -20163,6 +20163,11 @@ router.get("/", (req, res) => {
     hello: "hi!"
   });
 });
+router.get("/teste", (req, res) => {
+  res.json({
+    hello: "hi!"
+  });
+});
 app.use(`/.netlify/functions/api`, router);
 module.exports = app;
 module.exports.handler = serverless(app);
